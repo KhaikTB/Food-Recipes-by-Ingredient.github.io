@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Recipes by Ingredient</title>
+  <link rel = "stylesheet" href = "Food_Recipes.css">
+  <script src="https://kit.fontawesome.com/b199a44b40.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class='meal-wrapper'>
+    <div class='meal-search'>
+      <h2>Food Recipes by Ingredient</h2>
+      <blockquote>A recipe has no soul. You, as the cook, must bring soul to the recipe.<br>
+        <cite>- Thomas Keller</cite>
+      </blockquote>
+
+      <div class='meal-search-box'>
+        <input id='search-input' class='search-control' type="text" placeholder="Enter an ingredient">
+        <button id='search-btn' class='search-btn btn' type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class='meal-result'>
+      <h2>Your Search Results:</h2>
+      <div id='meal'></div>
+    </div>
+
+    <div class='meal-details'>
+      <!-- Recipe Close btn -->
+      <button id='recipe-close-btn' class='btn recipe-close-btn' type="button">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- Recipe Content -->
+      <div class='meal-details-content'></div>
+    </div>
+  </div>
+  
+  <script src="Food_Recipes.js"></script>
+</body>
+</html>

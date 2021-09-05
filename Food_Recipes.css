@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body
+{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(16px + 0.5vw);
+}
+
+:root
+{
+    --orange-light: hsl(29, 95%, 62%);
+    --orange-dark: hsl(29, 85%, 46%);
+    --white: white;
+}
+
+h2
+{
+    font-size: calc(25px + 0.5vw);
+    margin-bottom: 20px;
+}
+
+.meal-wrapper
+{
+    text-align: center;
+    padding: calc(15px + 0.5vw);
+}
+
+.meal-search
+{
+    margin: calc(10px + 0.5vw);
+}
+
+cite
+{
+    font-size: calc(12px + 0.5vw);
+}
+
+/* Search btn */
+
+.meal-search-box
+{
+    margin: calc(10px + 0.5vw) auto;
+    display: flex;
+    width: calc(250px + 20vw);
+}
+
+/* Search Text */
+
+.search-control
+{
+    width: 80%;
+    font-family: inherit;
+    font-size: calc(15px + 0.25vw);
+    padding: 0 calc(10px + 0.5vw);
+    color: var(--orange-light);
+    outline: 0;
+    border: solid var(--orange-light) 1px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.search-control::placeholder
+{
+    color: var(--orange-light);
+}
+
+/* Search btn */
+
+.search-btn
+{
+    width: 50px;
+    height: 50px;
+    font-size: calc(20px + 0.25vw);
+    color: var(--white);
+    background: var(--orange-light);
+    border: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.search-btn:hover
+{
+    background: var(--orange-dark);
+}
+
+.fa-search:active
+{
+	transform: scale(0.75);
+}
+
+/* Search results */
+
+.meal-result
+{
+    margin: calc(30px + 2vw) auto;
+}
+
+#meal
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#meal-item
+{
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px hsla(0, 0%, 0%, 0.5);
+    margin: calc(10px + 3vw) auto;
+    width: calc(250px + 3vw);
+}
+
+#meal-img > img
+{
+    width: 100%;
+    display: block;
+}
+
+#meal-name
+{
+    padding: calc(10px + 0.5vw) 0;
+}
+
+#meal-name h3
+{
+    font-size: calc(15px + 0.8vw);
+}
+
+/* Recipe btn */
+
+.recipe-btn
+{
+    font-size: calc(15px + 0.5vw);
+    font-weight: 500;
+    background: var(--orange-light);
+    color: var(--white);
+    margin: calc(10px + 1vw) auto;
+    padding: calc(5px + 0.25vw);
+    border-radius: 20px;
+    text-decoration: none;
+    display: block;
+    width: calc(110px + 1vw);
+}
+
+.recipe-btn:hover
+{
+    background: var(--orange-dark);
+}
+
+.recipe-btn:active
+{
+    transform: scale(0.75);
+}
+
+/* Meal Details */
+
+.meal-details
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--orange-light);
+    color: var(--white);
+    border-radius: 30px;
+    width: 75%;
+    height: 90%;
+    overflow-y: scroll;
+    display: none;
+    padding: calc(20px + 0.5vw) 0;
+}
+
+.meal-details::-webkit-scrollbar
+{
+    width: 10px;
+}
+
+.meal-details::-webkit-scrollbar-thumb
+{
+    background: var(--white);
+    border-radius: 20px;
+}
+
+/* JavaScript */
+
+.showRecipe
+{
+    display: block;
+}
+
+.meal-details-content
+{
+    margin: calc(20px + 0.5vw);
+}
+
+#recipe-close-btn
+{
+    position: absolute;
+    right: calc(15px + 0.25vw);
+    top: calc(15px + 0.25vw);
+    font-size: calc(20px + 0.25vw);
+    background: var(--white);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+#recipe-close-btn:active
+{
+    transform: scale(0.75);
+}
+
+#recipe-category
+{
+    background: var(--white);
+    color: var(--orange-light);
+    font-weight: 800;
+    margin: calc(12px + 0.5vw) 0;
+    padding: calc(5px + 0.25vw);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#recipe-instruct
+{
+    margin: calc(10px + 0.25vw) auto;
+}
+
+#recipe-meal-img > img
+{
+    width: 200px;
+    border-radius: 50%;
+    margin-top: calc(12px + 0.5vw);
+}
+
+#recipe-link
+{
+    margin: calc(12px + 0.5vw) 0;
+}
+
+#recipe-link > a
+{
+    font-size: calc(15px + 0.8vw);
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+}
+
+#recipe-link > a:hover
+{
+    color: red;
+}
+
+.notFound
+{
+    font-size: calc(20px + 0.5vw);
+    font-weight: 800;
+    color: var(--orange-light);
+    justify-content: center;
+}
